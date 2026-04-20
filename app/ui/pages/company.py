@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-from ui.components.cards import metric_card, section_title, page_header, risk_badge, glass_card
-from ui.components.charts import (outage_timeline, severity_donut, heatmap_hour_day,
+from app.ui.components.cards import metric_card, section_title, page_header, risk_badge, glass_card
+from app.ui.components.charts import (outage_timeline, severity_donut, heatmap_hour_day,
                                        service_breakdown, risk_gauge)
-from backend.data_engine import compute_risk, get_company_stats
-from backend.ai_engine import generate_suggestions
+from app.backend.data_engine import compute_risk, get_company_stats
+from app.backend.ai_engine import generate_suggestions
 
 COMPANIES = ["AWS", "Azure", "GCP", "Cloudflare", "Vercel", "Fastly", "Akamai"]
 

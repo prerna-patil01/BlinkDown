@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
-from ui.components.cards import metric_card, section_title, page_header, risk_badge
-from ui.components.charts import forecast_chart, risk_gauge
-from backend.data_engine import compute_risk
+from app.ui.components.cards import metric_card, section_title, page_header, risk_badge
+from app.ui.components.charts import forecast_chart, risk_gauge
+from app.backend.data_engine import compute_risk
 
 COMPANIES = ["AWS", "Azure", "GCP", "Cloudflare", "Vercel", "Fastly", "Akamai"]
 
@@ -58,7 +58,7 @@ def render(df, fin_df, pred_df):
         section_title("RISK LANDSCAPE — ALL COMPANIES", "🌐")
 
         import plotly.graph_objects as go
-        from ui.theme import PLOTLY_THEME, COLORS
+        from app.ui.theme import PLOTLY_THEME, COLORS
 
         risks = [(c, compute_risk(df, c)) for c in COMPANIES]
         risks.sort(key=lambda x: x[1]["risk_pct"], reverse=True)

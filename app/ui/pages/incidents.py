@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
-from ui.components.cards import section_title, page_header, metric_card
-from ui.components.charts import service_breakdown
-from ui.theme import PLOTLY_THEME, COLORS
+from app.ui.components.cards import section_title, page_header, metric_card
+from app.ui.components.charts import service_breakdown
+from app.ui.theme import PLOTLY_THEME, COLORS
 import plotly.graph_objects as go
 
 TABLE_HEIGHT = 420

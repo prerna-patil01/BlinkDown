@@ -2,10 +2,10 @@ import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
-from ui.components.cards import section_title, page_header, metric_card
-from ui.components.charts import severity_donut
-from backend.data_engine import compute_risk, get_company_stats
-from ui.theme import PLOTLY_THEME, COLORS
+from app.ui.components.cards import section_title, page_header, metric_card
+from app.ui.components.charts import severity_donut
+from app.backend.data_engine import compute_risk, get_company_stats
+from app.ui.theme import PLOTLY_THEME, COLORS
 
 COMPANIES = ["AWS", "Azure", "GCP", "Cloudflare", "Vercel", "Fastly", "Akamai"]
 
