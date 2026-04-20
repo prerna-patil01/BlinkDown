@@ -1,6 +1,6 @@
 import streamlit as st
-from app.ui.components.cards import section_title, page_header
-from app.backend.ai_engine import stream_blink, build_context
+from ui.components.cards import section_title, page_header
+from backend.ai_engine import stream_blink, build_context
 
 COMPANIES = ["All Companies", "AWS", "Azure", "GCP", "Cloudflare", "Vercel", "Fastly", "Akamai"]
 

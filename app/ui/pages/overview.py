@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
-from app.ui.components.cards import metric_card, section_title, page_header, status_indicator, glass_card
-from app.ui.components.charts import outage_timeline, severity_donut, company_comparison_bar, heatmap_hour_day
-from app.backend.data_engine import get_dashboard_kpis, get_current_status
+from ui.components.cards import metric_card, section_title, page_header, status_indicator, glass_card
+from ui.components.charts import outage_timeline, severity_donut, company_comparison_bar, heatmap_hour_day
+from backend.data_engine import get_dashboard_kpis, get_current_status
 
 def render(df, fin_df, pred_df):
     page_header("⚡ BlinkDown Overview", "Real-time outage intelligence across all monitored services")

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import streamlit as st
 
 from ui.theme import inject_css
@@ -9,6 +10,11 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+=======
+from ui.theme import inject_css
+from backend.data_engine import load_outages, load_financial, load_predictions
+from ui.pages import overview, company, predictions, compare, incidents, financial, ai_insights
+>>>>>>> ff5bdca (fix: removed app prefix everywhere)
 inject_css()
 
 # ── Sidebar ───────────────────────────────────────────────────────

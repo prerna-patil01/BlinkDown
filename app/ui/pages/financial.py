@@ -1,9 +1,9 @@
 import streamlit as st
 import plotly.graph_objects as go
 import pandas as pd
-from app.ui.components.cards import section_title, page_header, metric_card
-from app.ui.components.charts import financial_bar
-from app.ui.theme import PLOTLY_THEME, COLORS
+from ui.components.cards import section_title, page_header, metric_card
+from ui.components.charts import financial_bar
+from ui.theme import PLOTLY_THEME, COLORS
 
 COMPANIES = ["AWS", "Azure", "GCP", "Cloudflare", "Vercel", "Fastly", "Akamai"]
 
