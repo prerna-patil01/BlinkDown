@@ -1,8 +1,18 @@
-import streamlit as st
-from app.ui.theme import inject_css
-from app.backend.data_engine import load_outages, load_financial, load_predictions
-from app.ui.pages import overview, company, predictions, compare, incidents, financial, ai_insights
+import sys
 
+import os
+
+# 🔥 FIX FOR RENDER (VERY IMPORTANT)
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+import streamlit as st
+
+from app.ui.theme import inject_css
+
+from app.backend.data_engine import load_outages, load_financial, load_predictions
+
+from app.ui.pages import overview, company, predictions, compare, incidents, financial, ai_insights
 st.set_page_config(
     page_title="BlinkDown",
     page_icon="⚡",
